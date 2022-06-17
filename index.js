@@ -33,6 +33,7 @@ function runner() {
         ]).then(input => {
             const manager = new Manager(input.name1, input.id1, input.email1, input.officeNumber1);
             myTeamArray.push(manager);
+            myTeam();
         });
     }
 
@@ -44,6 +45,9 @@ function runner() {
             choices: ['Engineer', 'Intern', 'No More']
         }]).then(function (input) {
             switch (input.prompt) {
+                case "Manager":
+                    manager();
+                    break;
                 case "Engineer":
                     engineer1();
                     break;
@@ -114,10 +118,12 @@ function runner() {
         })
     }
     function htmlGenerator() {
-        fs.writeFileSync(utils.generateHTML(myTeamArray));
+        utils.generateHTML(myTeamArray);
     }
 
-    myTeam();
+    manager();
+
+    
 
 }
 
