@@ -118,7 +118,7 @@ function runner() {
         })
     }
     function htmlGenerator() {
-        utils.generateHTML(myTeamArray);
+        utils(myTeamArray);
     }
 
     manager();
