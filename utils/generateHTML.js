@@ -13,7 +13,7 @@ function writeToFile(html) {
 const generateHTML = (data) => {
     const manager = managerArray => {
         return `
-        <div class="col-4">
+        <div class="col-lg-4 col-md-7 col-sm-9">
             <div class="card border-dark m-4 mx-6">
                 <div class="intro text-light mx-4 my-1">
                     <h2 class="mx-2">
@@ -40,7 +40,7 @@ const generateHTML = (data) => {
         `}
     const engineer = engineerArray => {
         return `
-        <div class="col-4">
+        <div class="col-lg-4 col-md-7 col-sm-9">
             <div class="card border-dark m-4 mx-6">
                 <div class="intro text-light mx-4 my-1">
                     <h2 class="mx-2">
@@ -67,7 +67,7 @@ const generateHTML = (data) => {
             `}
     const intern = internArray => {
         return `
-        <div class="col-4">
+        <div class="col-lg-4 col-md-7 col-sm-9">
             <div class="card border-dark m-4 mx-6">
                 <div class="intro text-light mx-4 my-1">
                     <h2 class="mx-2">

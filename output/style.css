@@ -5,7 +5,6 @@
     text-align: center;
 }
 
-
 .card {
     background-color: rgb(175, 175, 175);
 }
@@ -15,13 +14,12 @@
     border-style: solid;
     border-radius: 10px;
     border-color: black;
-    font-size: 15px;
+    font-size: 1rem;
 }
-
 
 .second-section{
     background-color: white;
-    font-size: 20px;
+    font-size: 1rem;
     font-weight: 500;
 }
 
