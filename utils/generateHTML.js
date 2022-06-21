@@ -13,73 +13,79 @@ function writeToFile(html) {
 const generateHTML = (data) => {
     const manager = managerArray => {
         return `
-        <div class="card border-dark m-4 mx-6" style="max-width:fit-content">
-            <div class="intro text-light mx-4 my-1">
-                <h2 class="mx-2">
-                    ${managerArray.getName()}
-                </h2>
-                <h2 class="mx-2">
-                    ${managerArray.getRole()}
-                </h2>
-        </div class>
-            <div class="container border-dark">
-                <p class="m-1">
-                    ID: ${managerArray.getId()}
-                </p>
-                <p class="m-1">
-                    Email: ${managerArray.getEmail()}
-                </p>
-                <p class="m-1">
-                    Office Number: ${managerArray.getOfficeNumber()}
-                </p>
+        <div class="col-4">
+            <div class="card border-dark m-4 mx-6">
+                <div class="intro text-light mx-4 my-1">
+                    <h2 class="mx-2">
+                        ${managerArray.getName()}
+                    </h2>
+                    <h2 class="mx-2">
+                        ${managerArray.getRole()}
+                    </h2>
+                </div>
+                <div class="border-dark second-section">
+                    <p class="m-2">
+                        ID: ${managerArray.getId()}
+                    </p>
+                    <p class="m-2">
+                        Email: ${managerArray.getEmail()}
+                    </p>
+                    <p class="m-2">
+                        Office Number: ${managerArray.getOfficeNumber()}
+                    </p>
+                </div>
             </div>
         </div>
         `}
     const engineer = engineerArray => {
         return `
-        <div class="card border-dark m-4 mx-6" style="max-width:fit-content">
-            <div class="intro text-light mx-4 my-1">
-                <h2 class="mx-2">
-                    ${engineerArray.getName()}
-                </h2>
-                <h2 class="mx-2">
-                    ${engineerArray.getRole()}
-                </h2>
-        </div class>
-            <div class="container border-dark">
-                <p class="m-1">
-                    ID: ${engineerArray.getId()}
-                </p>
-                <p class="m-1">
-                    Email: ${engineerArray.getEmail()}
-                </p>
-                <p class="m-1">
-                    GitHub: ${engineerArray.getGitHub()}
-                </p>
+        <div class="col-4">
+            <div class="card border-dark m-4 mx-6">
+                <div class="intro text-light mx-4 my-1">
+                    <h2 class="mx-2">
+                        ${engineerArray.getName()}
+                    </h2>
+                    <h2 class="mx-2">
+                        ${engineerArray.getRole()}
+                    </h2>
+                </div>
+                <div class="border-dark second-section">
+                    <p class="m-2">
+                        ID: ${engineerArray.getId()}
+                    </p>
+                    <p class="m-2">
+                        Email: ${engineerArray.getEmail()}
+                    </p>
+                    <p class="m-2">
+                        GitHub: ${engineerArray.getGitHub()}
+                    </p>
+                </div>
             </div>
         </div>
             `}
     const intern = internArray => {
         return `
-        <div class="card border-dark m-4 mx-6" style="max-width:fit-content">
-            <div class="intro text-light mx-4 my-1">
-                <h2 class="mx-2">
-                    ${internArray.getName()}
-                </h2>
-                <h2 class="mx-2">
-                    ${internArray.getRole()}
-                </h2>
-        </div class>
-            <div class="container border-dark">
-                <p class="m-1">
-                    ID: ${internArray.getId()}
-                </p>
-                <p class="m-1">
-                    Email: ${internArray.getEmail()}
-                </p>
-                <p class="m-1">
-                    School: ${internArray.getSchool()}
-                </p>
+        <div class="col-4">
+            <div class="card border-dark m-4 mx-6">
+                <div class="intro text-light mx-4 my-1">
+                    <h2 class="mx-2">
+                        ${internArray.getName()}
+                    </h2>
+                    <h2 class="mx-2">
+                        ${internArray.getRole()}
+                    </h2>
+                </div>
+                <div class="border-dark second-section">
+                    <p class="m-2">
+                        ID: ${internArray.getId()}
+                    </p>
+                    <p class="m-2">
+                        Email: ${internArray.getEmail()}
+                    </p>
+                    <p class="m-2">
+                        School: ${internArray.getSchool()}
+                    </p>
+                </div>
             </div>
         </div>
             `}
@@ -117,8 +123,10 @@ const generateHTML = (data) => {
             My Team
         </div>
         <body>
-        <div class="holder justify-content-center">
+        <div class="container">
+        <div class="holder justify-content-center row">
            ${employeesVar(data)}
+        </div>
         </div>
         </body>
         
