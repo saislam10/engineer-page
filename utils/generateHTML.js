@@ -13,64 +13,76 @@ function writeToFile(html) {
 const generateHTML = (data) => {
     const manager = managerArray => {
         return `
-        <div class='manager'>
-        <h2>
-            ${managerArray.getName()}
-        </h2>
-        <h2>
-            ${managerArray.getRole()}
-        </h2>
-        <p>
-            ID: ${managerArray.getId()}
-        </p>
-        <p>
-            Email: ${managerArray.getEmail()}
-        </p>
-        <p>
-            Office Number: ${managerArray.getOfficeNumber()}
-        </p>
-    </div>
+        <div class="card border-dark m-4 mx-6" style="max-width:fit-content">
+            <div class="intro text-light mx-4 my-1">
+                <h2 class="mx-2">
+                    ${managerArray.getName()}
+                </h2>
+                <h2 class="mx-2">
+                    ${managerArray.getRole()}
+                </h2>
+        </div class>
+            <div class="container border-dark">
+                <p class="m-1">
+                    ID: ${managerArray.getId()}
+                </p>
+                <p class="m-1">
+                    Email: ${managerArray.getEmail()}
+                </p>
+                <p class="m-1">
+                    Office Number: ${managerArray.getOfficeNumber()}
+                </p>
+            </div>
+        </div>
         `}
     const engineer = engineerArray => {
         return `
-            <div class='engineer'>
-            <h2>
-                ${engineerArray.getName()}
-            </h2>
-            <h2>
-                ${engineerArray.getRole()}
-            </h2>
-            <p>
-                ID: ${engineerArray.getId()}
-            </p>
-            <p>
-                Email: ${engineerArray.getEmail()}
-            </p>
-            <p>
-                Office Number: ${engineerArray.getGitHub()}
-            </p>
+        <div class="card border-dark m-4 mx-6" style="max-width:fit-content">
+            <div class="intro text-light mx-4 my-1">
+                <h2 class="mx-2">
+                    ${engineerArray.getName()}
+                </h2>
+                <h2 class="mx-2">
+                    ${engineerArray.getRole()}
+                </h2>
+        </div class>
+            <div class="container border-dark">
+                <p class="m-1">
+                    ID: ${engineerArray.getId()}
+                </p>
+                <p class="m-1">
+                    Email: ${engineerArray.getEmail()}
+                </p>
+                <p class="m-1">
+                    GitHub: ${engineerArray.getGitHub()}
+                </p>
+            </div>
         </div>
             `}
     const intern = internArray => {
         return `
-                <div class='manager'>
-                <h2>
+        <div class="card border-dark m-4 mx-6" style="max-width:fit-content">
+            <div class="intro text-light mx-4 my-1">
+                <h2 class="mx-2">
                     ${internArray.getName()}
                 </h2>
-                <h2>
+                <h2 class="mx-2">
                     ${internArray.getRole()}
                 </h2>
-                <p>
+        </div class>
+            <div class="container border-dark">
+                <p class="m-1">
                     ID: ${internArray.getId()}
                 </p>
-                <p>
+                <p class="m-1">
                     Email: ${internArray.getEmail()}
                 </p>
-                <p>
-                    Office Number: ${internArray.getSchool()}
+                <p class="m-1">
+                    School: ${internArray.getSchool()}
                 </p>
             </div>
-                `}
+        </div>
+            `}
     const employeesVar = employees => {
         let employeesStr = ""
         for (i = 0; i < employees.length; i++) {
@@ -97,17 +109,22 @@ const generateHTML = (data) => {
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Team Members</title>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+            integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+            <link rel="stylesheet" href="./style.css">
         </head>
-        <h1>
+        <div class="m-1 page-header">
             My Team
-        </h1>
+        </div>
         <body>
+        <div class="holder justify-content-center">
            ${employeesVar(data)}
+        </div>
         </body>
         
         </html>
         `
-        
+
     }
     writeToFile(templateHTML(data));
 }
