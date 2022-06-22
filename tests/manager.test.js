@@ -1,6 +1,6 @@
 const Manager = require("../lib/manager");
 
-test("Able to create manager", ()=>{
+test("Able to create manager", () => {
     const managerTest = new Manager();
     expect(typeof(managerTest)).toBe("object");
 });

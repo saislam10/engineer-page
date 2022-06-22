@@ -29,7 +29,7 @@ const generateHTML = (data) => {
                         ID: ${managerArray.getId()}
                     </p>
                     <p class="m-2">
-                        Email: ${managerArray.getEmail()}
+                        Email: <a href="mailto:${managerArray.getEmail()}">${managerArray.getEmail()}</a>
                     </p>
                     <p class="m-2">
                         Office Number: ${managerArray.getOfficeNumber()}
@@ -56,10 +56,10 @@ const generateHTML = (data) => {
                         ID: ${engineerArray.getId()}
                     </p>
                     <p class="m-2">
-                        Email: ${engineerArray.getEmail()}
+                        Email: <a href="mailto:${engineerArray.getEmail()}">${engineerArray.getEmail()}</a>
                     </p>
                     <p class="m-2">
-                        GitHub: ${engineerArray.getGitHub()}
+                        GitHub: <a href="https://github.com/${engineerArray.getGitHub()}">${engineerArray.getGitHub()}</a>
                     </p>
                 </div>
             </div>
@@ -83,7 +83,7 @@ const generateHTML = (data) => {
                         ID: ${internArray.getId()}
                     </p>
                     <p class="m-2">
-                        Email: ${internArray.getEmail()}
+                        Email: <a href="mailto:${internArray.getEmail()}">${internArray.getEmail()}</a>
                     </p>
                     <p class="m-2">
                         School: ${internArray.getSchool()}

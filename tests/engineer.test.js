@@ -1,6 +1,6 @@
 const Engineer = require("../lib/engineer");
 
-test("Able to create new engineer", ()=>{
+test("Able to create new engineer", () => {
     const engineerTest = new Engineer();
     expect(typeof(engineerTest)).toBe("object");
 });
