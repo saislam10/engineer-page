@@ -24,9 +24,9 @@ test("Email tester", () => {
 });
 
 test("Github tester", () => {
-    const github = "jason-1234"
-    const engineerTest = new Engineer("Jason", 1234, "Jason@email.com", github);
-    expect(engineerTest.github).toBe(github);
+    const gitHub = "jason1234"
+    const engineerTest = new Engineer("Jason", 1234, "Jason@email.com", gitHub);
+    expect(engineerTest.gitHub).toBe(gitHub);
 });
 
 test("Testing getName()", () => {
@@ -54,7 +54,7 @@ test("Testing getRole()", () => {
 });
 
 test("Testing getGitHub()", () => {
-    const github = "jason-1234"
+    const github = "jason1234"
     const engineerTest = new Engineer("Jason", 1234, "Jason@email.com", github);
     expect(engineerTest.getGitHub()).toBe(github);
 });
