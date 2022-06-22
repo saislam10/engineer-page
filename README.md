@@ -19,7 +19,7 @@ In this challenge, there is code which builds out a html page. The page contains
 
 
 ## Resources
-[HTML Site](https://raw.githubusercontent.com/saislam10/readme-creator/main/Develop/output/README.md)
+[HTML Site](https://raw.githubusercontent.com/saislam10/engineer-page/main/output/output.html)
 
 [Video Link](https://drive.google.com/file/d/1vIAdpJ3VV05yj0IuYMygDHAmrNXqE_q1/view)
 
